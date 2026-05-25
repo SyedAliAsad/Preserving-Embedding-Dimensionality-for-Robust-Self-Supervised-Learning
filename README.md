@@ -1,6 +1,6 @@
-Preserving Embedding Dimensionality for Robust Self-Supervised Learning
+**Preserving Embedding Dimensionality for Robust Self-Supervised Learning
 Master's Thesis — University of Eastern Finland
-Author: Syed Ali Asad | Supervisor: Professor Xiao-Zhi Gao | Year: 2026
+Author: Syed Ali Asad | Supervisor: Professor Xiao-Zhi Gao | Year: 2026**
 
 **Overview**
 Self-supervised learning (SSL) methods like SimCLR and VICReg learn visual representations without labeled data by enforcing invariance between augmented views of the same image. This works well on clean benchmarks, but these representations are often surprisingly fragile under distribution shift.
