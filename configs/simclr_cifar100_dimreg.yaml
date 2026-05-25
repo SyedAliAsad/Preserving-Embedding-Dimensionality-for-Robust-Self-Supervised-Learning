@@ -1,0 +1,35 @@
+# SimCLR + Dimensionality Regularizer on CIFAR-100
+# Usage: python scripts/train.py --config configs/simclr_cifar100_dimreg.yaml
+
+method: simclr
+backbone: resnet18
+temperature: 0.2
+
+proj_hidden_dim: 2048
+proj_out_dim: 128
+proj_layers: 2
+
+dataset: cifar100
+data_dir: ./data
+batch_size: 512
+epochs: 400
+optimizer: adamw
+lr: 0.001
+weight_decay: 1e-4
+warmup_epochs: 10
+
+# ---- Dimensionality regularizer ----
+use_dim_reg: true
+dim_reg_weight: 0.1
+dim_reg_momentum: 0.99
+dim_reg_schedule: linear_warmup
+dim_reg_warmup_epochs: 20
+dim_reg_on: projector
+
+eval_every: 50
+log_spectral_every: 50
+probe_epochs: 100
+probe_lr: 0.3
+
+wandb_project: dim-ssl
+seed: 42

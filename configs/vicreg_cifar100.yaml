@@ -1,0 +1,31 @@
+# VICReg baseline on CIFAR-100
+# Usage: python scripts/train.py --config configs/vicreg_cifar100.yaml
+
+method: vicreg
+backbone: resnet18
+
+proj_hidden_dim: 2048
+proj_out_dim: 2048
+proj_layers: 3
+
+sim_weight: 25.0
+var_weight: 25.0
+cov_weight: 1.0
+
+dataset: cifar100
+data_dir: ./data
+batch_size: 256
+epochs: 400
+optimizer: adamw
+lr: 0.001
+weight_decay: 1e-4
+warmup_epochs: 10
+
+use_dim_reg: false
+
+eval_every: 50
+probe_epochs: 100
+probe_lr: 0.3
+
+wandb_project: dim-ssl
+seed: 42

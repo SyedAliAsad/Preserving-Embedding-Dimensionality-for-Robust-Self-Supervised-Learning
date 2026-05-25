@@ -1,0 +1,28 @@
+# Data and checkpoints
+data/
+checkpoints/
+*.pth
+*.pt
+figures/
+
+# Python cache
+__pycache__/
+*.pyc
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Colab and jupyter
+*.ipynb_checkpoints
+.ipynb_checkpoints/
+
+# Environment
+.env
+venv/
+*.egg
+
+# Logs and outputs
+wandb/
+*.log
+results_*.json
