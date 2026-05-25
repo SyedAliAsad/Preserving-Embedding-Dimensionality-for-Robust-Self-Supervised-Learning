@@ -27,37 +27,6 @@ Applied at the encoder output, not the projector (projector absorbs the gradient
 EMA covariance estimator with momentum 0.99 for stable estimates
 Blended covariance (50% batch + 50% EMA) to maintain gradient flow while keeping stability
 
-
-**Repository Structure**
-dim-ssl/
-├── src/
-│   ├── losses/
-│   │   ├── simclr.py          # NT-Xent contrastive loss
-│   │   ├── vicreg.py          # VICReg loss
-│   │   ├── barlow_twins.py    # Barlow Twins loss
-│   │   └── dim_reg.py         # Von Neumann entropy regularizer (core contribution)
-│   ├── models/
-│   │   └── ssl_model.py       # Encoder + projection head
-│   ├── data/
-│   │   └── augmentations.py   # CIFAR-100 and STL-10 augmentations
-│   └── utils/
-│       └── config.py          # Config loading and defaults
-├── scripts/
-│   ├── train.py               # Main training script
-│   ├── eval_robustness.py     # CIFAR-100-C corruption robustness evaluation
-│   ├── eval_robustness_stl10.py  # STL-10 corruption evaluation
-│   └── make_plots.py          # Generate all thesis figures
-├── configs/
-│   ├── simclr_cifar100.yaml
-│   ├── simclr_cifar100_dimreg.yaml
-│   ├── vicreg_cifar100.yaml
-│   ├── vicreg_cifar100_dimreg.yaml
-│   ├── barlow_cifar100.yaml
-│   ├── barlow_cifar100_dimreg.yaml
-│   ├── simclr_stl10.yaml
-│   └── simclr_stl10_dimreg.yaml
-└── README.md
-
 **Getting Started**
 **Installation**
 bashgit clone https://github.com/SyedAliAsad/Preserving-Embedding-Dimensionality-for-Robust-Self-Supervised-Learning.git
